@@ -1,0 +1,74 @@
+// SUB NAVIGATIONS
+// -----------
+
+// Sub Nav
+// -------------------------
+@subNavbarPadding:                10px;
+@subNavbarBackground:             @grayLight3;
+@subNavbarBackgroundHighlight:    @grayLighter;
+@subNavbarBorderColor:            @grayLight1;
+
+
+// BASE CLASS
+// ----------
+
+.subnav {
+    margin: 0;
+    padding: @subNavbarPadding 20px;
+    //gradient > .vertical(@subNavbarBackgroundHighlight, @subNavbarBackground);
+    //.box-shadow(~"0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1)");
+    border-bottom: 1px solid @subNavbarBorderColor;
+    min-height: 30px;
+
+    .btn-toolbar {
+        margin: 0;
+    }
+}
+
+.navbar-search {
+    margin: 0;
+    
+    .search-input-container {
+        position: relative;
+        
+        .input-append {
+            margin: 0;
+        }
+        
+        a {
+             left: 200px;
+             position: absolute;
+             top: 5px;
+             z-index: 10;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .navbar-search {
+        float:left;
+    }
+}
+
+
+button,
+.nav li a {
+    position: relative;
+    .count {
+        position: absolute;
+        top: -8px;
+        right: 4px;
+        z-index: 100;
+        font-size: 75%;
+        line-height: 10px;
+        padding: 2px;
+        color: @white;
+        background-color: #c11111;
+        .border-radius(2px);
+    }
+}
+
+.nav li a {
+    .count {
+        top: 20px;
+    }
+}

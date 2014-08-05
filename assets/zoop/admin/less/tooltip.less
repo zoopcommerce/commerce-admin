@@ -1,0 +1,22 @@
+//
+// Tooltips
+// --------------------------------------------------
+
+
+// Base class
+.tooltip {
+    z-index: 10000;
+    &.top {
+        margin-top: -15px;
+    }
+
+    &.inverse {
+        .tooltip-arrow {
+            border-top-color: #fff;
+        }
+        .tooltip-inner {
+            background: #fff;
+            color: #000;
+        }
+    }
+}

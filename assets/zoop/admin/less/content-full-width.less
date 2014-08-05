@@ -1,0 +1,67 @@
+
+.full-height-column {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 500px;
+}
+
+.full-width-container {
+    div[class*="full-width-container-"] {
+        h4 {
+            padding: 20px 10px;
+        }
+
+        &.full-width-container-left {
+            border-right: 1px solid @grayLight1;
+            .box-shadow(~"8px 0px 12px -2px rgba(0,0,0,0.10)");
+            padding: 0 20px;
+        }
+        &.full-width-container-right {
+            border-left: 1px solid @grayLight1;
+            padding: 0 20px;
+        }
+         &.full-width-container-right,
+         &.full-width-container-left {
+            .full-width-container-title {
+                position: absolute; 
+                width: 100%; 
+                top: -70px;
+                .btn {
+                    margin-top: 20px;
+                }
+            }
+            .pod-container {
+                top: 55px;
+            }
+         }
+        
+        .btn-toolbar {
+            margin: 20px 10px;
+        }
+
+        .pod-container {
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 480px) {
+    #content {
+        &.full-width {
+            .row-fluid {
+                .span3 {
+                    margin: 0;
+                    width: 25%
+                }
+                .span9 {
+                    margin: 0;
+                    width: 75%;
+                    .span6 {
+                        width: 50%;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

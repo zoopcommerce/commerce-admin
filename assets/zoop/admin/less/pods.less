@@ -1,0 +1,127 @@
+// Pods
+// -------------------------
+@podPadding: 10px;
+
+.pod-container {
+    position: relative;
+    .selected {
+        border-color: darken(@zoop, 10%);
+        .box-shadow(0 0 5px lighten(@zoop, 10%));
+        opacity: 0.5;
+    }
+}
+
+.pod {
+    position: relative;
+    background-color: @white;
+    .border-radius(2px);
+    border-width: 1px;
+    border-style: solid;
+    border-color: @white @grayLight1 @grayLight1;
+    padding: 0;
+    margin-bottom: 10px;
+
+    .well {
+        .border-radius(0);
+        background-color: @white;
+        border: none;
+        .box-shadow(none);
+        margin-bottom: 0px;
+        padding: @podPadding*2 @podPadding*2 0;
+    }
+
+    h2 {
+        background: #fff;
+        color: @gray;
+        padding: @podPadding*2;
+    }
+
+    .details-container {
+        padding: @podPadding;
+
+        .input-block {
+            width: 92.5%;
+        }
+        .input-prepend,
+        .input-append {
+            .input-block {
+                width: 88.2%;
+            }
+        }
+        .section {
+            border-bottom: 1px dotted #E3E3E3;
+        }
+    }
+
+    .actions-container {
+        width: 100%;
+        z-index: 10;
+        overflow: hidden;
+        position: absolute;
+        background: #fff;
+
+        .actions-inner {
+            padding: 2px;
+            ul {
+                padding: 0;
+                margin: 0;
+                li {
+                    float: left;
+
+                    a {
+                        color: @grayLight;
+                        font-size: 24px;
+                        line-height: 39px;
+                        padding: @podPadding/2 @podPadding;
+                        &:hover {
+                            text-decoration: none;
+                            background: @actionBackgroundHover;
+                            color:#70b1c5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        border-top: 1px solid @grayLight1;
+        padding: @podPadding*2;
+        .gradientBar(@white, @grayLight3, @gray, none);
+    }
+}
+
+.pod-small,
+.pod-mini {
+    width: 215px;
+    .details-container {
+        h4 {
+            border-bottom: 1px dotted @grayLight3;
+            padding-bottom: 3px;
+        }
+        .sub-details-container {
+            padding-top: 10px;
+            .clearfix();
+            font-family: @sansFontFamily;
+            font-size: @tinyFontSize;
+        }
+    }
+}
+
+.pod-mini {
+    width: 150px;
+}
+
+.pod-full-width {
+    padding: 10px;
+    margin-bottom: 10px;
+    > .row-fluid {
+        margin-top: 15px;
+    }
+}
+
+.modal-body {
+    .pod {
+        border: none;
+    }   
+}

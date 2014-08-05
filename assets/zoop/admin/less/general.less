@@ -1,0 +1,112 @@
+@loadingIconSize: 26px;
+@loadingIconHeight: 26px;
+@loadingFontSize: 20px;
+
+.pre-load-container {
+    background: rgba(255, 255, 255, 0.9);
+    height: 100px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-top: 100px;
+    z-index: 1000;
+    
+    .pre-load-icon-container {
+        text-align: center;
+        display: block;
+        width: 100%;
+
+        i.icon-refresh {
+            padding: 0;
+            margin: 0;
+            font-size: @loadingIconSize;
+            width: @loadingIconSize;
+            height: @loadingIconHeight;
+            line-height: @loadingIconSize;
+            color: @zoop;
+        }
+    }
+
+    .message {
+        color: @zoop;
+        font-family: @zoopFontFamily;
+        font-weight: normal;
+        font-size: @loadingFontSize;
+        line-height: (@loadingFontSize+2);
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+a i[class^="icon-"] {
+    font-size: 18px;
+}
+
+a:hover i[class*="icon-"],
+a:hover i[class^="icon-"] {
+    text-decoration: none;
+}
+
+i.icon-sort {
+    cursor: n-resize;
+}
+
+.dojoDndDummyItem {
+    opacity: 0.3;
+    background: #f7fcfc;
+}
+
+.login {
+    margin: 0 auto 20px;
+    max-width: 550px;
+    &.pod {
+        h2 {
+        padding: 0 20px 20px 0;
+        }
+    }
+}
+
+.error {
+    color: @errorColor;
+}
+
+.success {
+    color: @successColor;
+}
+
+.info {
+    color: @zoop;
+}
+
+.no-data {
+    padding: 50px 0 50px 0;
+    text-align: center;
+}
+
+.well {
+    background: @grayLighter1;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.empty-container {
+    color: @grayLight2;
+    font-family: @zoopFontFamily;
+    font-size: 80px;
+    line-height: 70px;
+    position: absolute;
+    text-align: center;
+    top: 150px;
+    width: 100%;
+}
+
+.modal {
+    .pre-load-container {
+        z-index: 10000;
+    }
+}
+
+.well-no-pad  {
+    padding: 0px;
+}

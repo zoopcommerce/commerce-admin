@@ -1,0 +1,60 @@
+// Custom Zoop Button styles
+.btn {
+    .border-radius(2px);
+    font-size: @smallFontSize;
+    padding: 4px 20px;
+}
+
+.btn-mini {
+    font-size: @tinyFontSize;
+    padding: 1px 20px;
+}
+
+.btn-large {
+  .border-radius(3px);
+  padding: 9px 14px;
+  font-size: 15px;
+}
+.btn-group > .btn:first-child {
+     -webkit-border-top-left-radius: 2px;
+         -moz-border-radius-topleft: 2px;
+             border-top-left-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+      -moz-border-radius-bottomleft: 2px;
+          border-bottom-left-radius: 2px;
+}
+
+.btn-group > .btn:last-child,
+.btn-group > .dropdown-toggle {
+     -webkit-border-top-right-radius: 2px;
+         -moz-border-radius-topright: 2px;
+             border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+      -moz-border-radius-bottomright: 2px;
+          border-bottom-right-radius: 2px;
+}
+// Reset corners for large buttons
+.btn-group > .btn.large:first-child {
+     -webkit-border-top-left-radius: 3px;
+         -moz-border-radius-topleft: 3px;
+             border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+      -moz-border-radius-bottomleft: 3px;
+          border-bottom-left-radius: 3px;
+}
+.btn-group > .btn.large:last-child,
+.btn-group > .large.dropdown-toggle {
+     -webkit-border-top-right-radius: 3px;
+         -moz-border-radius-topright: 3px;
+             border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+      -moz-border-radius-bottomright: 3px;
+          border-bottom-right-radius: 3px;
+}
+
+.btn-append-small {
+    .btn {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}

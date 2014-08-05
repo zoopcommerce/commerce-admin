@@ -1,0 +1,114 @@
+.dropdown-menu {
+    table {
+        background: @white;
+    }
+    .active {
+        > a {
+            color: #fff;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    li {
+        a [class^="icon-"] {
+            font-size: 14px;
+            padding-right: 5px;
+        }
+    }
+
+    .pagination {
+        margin: 0;
+        ul {
+            box-shadow: none;
+            border-radius: 0;
+            border: none;
+            li {
+                > a {
+                    border: none;
+                    &:hover {
+                        color: @grayLight;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dropdown-form {
+    padding: 10px;
+}
+
+.dropdown-search-form {
+    width: 100%;
+}
+
+.dropdown-select-form {
+    top: 30px;
+    min-width: 450px;
+    padding: 0;
+    table {
+        td {
+            border: none;
+            padding: 0;
+        }
+    }
+
+    a {
+        display: block;
+        padding: 4px 5px;
+        color: @zoop;
+        font-size: 12px;
+
+        .active,
+        &:hover {
+            background: @zoop;
+            color: @white;
+            text-decoration: none;
+        }
+    }
+
+    .table-container {
+        min-height: 80px;
+        padding: 10px;
+        position: relative;
+        .empty-container {
+            font-size: 45px;
+            top: 10px;
+        }
+    }
+
+    .dropdown-header {
+        background: @grayLighter;
+        padding: 10px;
+        border-bottom: 1px solid @grayLight1;
+        .control-group {
+            margin: 0;
+            .input-prepend,
+            .input-append {
+                margin: 0;
+            }
+        }
+    }
+}
+.modal-body {
+    .dropdown-select-form {
+        top: 54px;
+    }
+}
+
+.inverse {
+    .dropdown-menu {
+        background-color: #333333;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        .box-shadow(0 5px 10px rgba(0, 0, 0, 0.8));
+
+        li,
+        > li {
+            background-color: #333333;
+            > a {
+                color: #fff;
+            }
+        }
+    }
+}

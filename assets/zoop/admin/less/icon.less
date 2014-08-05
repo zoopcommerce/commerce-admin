@@ -1,0 +1,40 @@
+a i[class^="icon-"] {
+    font-size: @iconFontSize;
+    &.icon-small {
+        font-size: @smallIconFontSize;
+    }
+}
+
+a:hover i[class*="icon-"],
+a:hover i[class^="icon-"] {
+    text-decoration: none;
+}
+
+.icon-sort {
+    cursor: n-resize;
+}
+
+.icon-check-empty,
+.icon-remove-circle,
+.icon-arrow-down {
+    color: @errorColor;
+}
+
+.icon-check,
+.icon-ok-circle,
+.icon-arrow-up {
+    color: @successColor;
+}
+
+.label {
+    .icon-check,
+    .icon-ok-circle,
+    .icon-remove-circle,
+    .icon-arrow-up {
+        color: @white;
+    }
+}
+.label-fw {
+    text-align: center;
+    width: 2em;
+}

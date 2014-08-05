@@ -1,0 +1,96 @@
+table.unstyled {
+    background: inherit;
+    margin: 0;
+    td {
+        border: none;
+        vertical-align: middle;
+    }
+}
+
+table.data-strip {
+    margin: 0;
+    border-collapse: separate;
+    th,
+    td {
+        background: @white;
+        font-size: 12px;
+        text-align: center;
+        vertical-align: middle;
+        border-bottom: 1px solid @tableBorder;
+        border-right: 1px solid @tableBorder;
+        text-transform: uppercase;
+    }
+    td:first-child {
+        border-left: none;
+    }
+    td:last-child {
+        border-right: none;
+    }
+    td.active {
+        border-bottom: none;
+    }
+    td:hover {
+        background: @actionBackgroundHover;
+        cursor: pointer;
+    }
+    
+    .icon-check-empty,
+    .icon-check {
+        color: @textColor;
+    }
+}
+
+table.table-hover {
+    tr {
+        td {
+            cursor: pointer;
+        }
+    }
+}
+
+table.table-hover {
+    tr {
+        &:hover {
+            td {
+                cursor: pointer;
+                table {
+                    tr {
+                        td {
+                            background: inherit;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.table-feed {
+    background-color: @white;
+    
+    tr {
+        td {
+            border-top: none;
+            border-bottom: 1px dotted @grayLight1;
+            line-height: 24px;
+            
+            padding: 14px 8px;
+            
+            i[class^="icon-"] {
+                font-size: 18px;
+                line-height: 24px;
+            }
+            
+            [class^="alert-"] {
+                font-weight: bold;
+                background: none;
+                border: none;
+            }
+        }
+        
+        &:hover > td {
+            background: @actionBackgroundHover;
+            cursor: pointer;
+        }
+    }
+}
