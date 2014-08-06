@@ -24,6 +24,33 @@
     ],
     "repositories": [
         {
+            "type": "package",
+            "package": {
+                "name": "cssmin/cssmin",
+                "version": "3.0.1",
+                "dist": { "url": "http://cssmin.googlecode.com/files/cssmin-v3.0.1.php", "type": "file" },
+                "autoload": { "classmap": [ "cssmin-v3.0.1.php" ] }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "kamicane/packager",
+                "version": "1.0",
+                "dist": { "url": "https://github.com/kamicane/packager/archive/1.0.zip", "type": "zip" },
+                "autoload": { "classmap": [ "." ] }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "joliclic/javascript-packer",
+                "version": "1.1",
+                "dist": { "url": "http://joliclic.free.fr/php/javascript-packer/telechargement.php?id=2&action=telecharger", "type": "zip" },
+                "autoload": { "classmap": [ "class.JavaScriptPacker.php" ] }
+            }
+        },
+        {
             "type": "vcs",
             "url":  "git@github.com:zoopcommerce/commerce-api-module.git"
         },
@@ -57,6 +84,7 @@
         "zendframework/zendframework"               : "2.3.1",
         "aws/aws-sdk-php"                           : "2.*",
         "codeguy/upload"                            : "dev-master#ff376306aacbd1005c7739dc171fae4edd96d8b7",
+        "cssmin/cssmin"                             : "~3.0",
         "doctrine/annotations"                      : "dev-master#a11349d39d85bef75a71bd69bd604ac4fb993f03 as dev-master",
         "doctrine/doctrine-mongo-odm-module"        : "1.0.x-dev",
         "doctrine/doctrine-module"                  : "1.0.x-dev as 1.0",
@@ -65,9 +93,15 @@
         "dompdf/dompdf"                             : "dev-master#03ad3265797a338dce2d7064edd0cb4ebedb052b as dev-master",
         "ezyang/htmlpurifier"                       : "v4.5.0",
         "imagine/imagine"                           : "~0.6",
+        "joliclic/javascript-packer"                : "~1.0",
+        "kamicane/packager"                         : "~1.0",
+        "leafo/lessphp"                             : "~0.4",
         "mashape/unirest-php"                       : "~1.2",
         "melihucar/ftpclient"                       : "dev-master#faab472b1f3118d4926b3cbfc7d21c9cba255c0f as dev-master",
+        "mrclay/minify"                             : "~2.0",
+        "ptachoire/cssembed"                        : "~1.0",
         "sendgrid/sendgrid"                         : "~2.1",
+        "twbs/bootstrap"                            : "~2.3",
         "willdurand/geocoder"                       : "2.4.*",
         "widmogrod/zf2-assetic-module"              : "1.*",
         "zoopcommerce/commerce-api-module"          : "dev-master",
@@ -88,6 +122,11 @@
     "autoload": {
         "psr-0": {
             "Application": "module/Application/src/"
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "module/Application/assets/css/lib/{$name}": ["twbs/bootstrap"]
         }
     }
 }

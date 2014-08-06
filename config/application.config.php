@@ -7,6 +7,7 @@ return [
         'Zoop\MaggottModule',
         'DoctrineModule',
         'DoctrineMongoODMModule',
+        'AsseticBundle',
         'Zoop\ShardModule',
         'Zoop\Api',
         'Zoop\Common',
@@ -18,7 +19,7 @@ return [
         'config_cache_enabled' => ($env != 'development'),
         //'config_cache_enabled' => true,
         'config_cache_key'     => 'app_config',
-        'cache_dir'            => 'data/cache/zf2',
+        'cache_dir'            => 'data/cache',
         'check_dependencies'   => ($env == 'development')
     ],
 ];

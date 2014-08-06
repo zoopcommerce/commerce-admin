@@ -1,6 +1,68 @@
 <?php
 
 return [
+    'assetic_configuration' => [
+        'debug' => false,
+        'buildOnRequest' => true,
+        'webPath' => __DIR__ . '/../../../public',
+        'default' => [
+            'assets' => [
+                '@lib_js',
+                '@zoop_admin_css',
+            ],
+            'options' => [
+                'mixin' => true,
+            ],
+        ],
+        'modules' => [
+            'application' => [
+                'root_path' => __DIR__ . '/../assets',
+                'collections' => [
+                    'zoop_admin_css' => [
+                        'assets' => [
+                            'css/zoop/admin/_base.less',
+                        ],
+                        'filters' => [
+                            'LessphpFilter' => [
+                                'name' => 'Assetic\Filter\LessphpFilter'
+                            ],
+                            'CssRewriteFilter' => [
+                                'name' => 'Assetic\Filter\CssRewriteFilter'
+                            ],
+                        ],
+                        'options' => [
+                            'output' => 'css/admin.css'
+                        ]
+                    ],
+                    'lib_js' => [
+                        'assets' => [
+                            'js/libs/ember/ember-1.6.1.js',
+                            'js/libs/jquery/jquery-1.10.2.js',
+                            'js/libs/handlebars/handlebars-1.1.2.js',
+                        ],
+                        'filters' => [
+                            'JSMinFilter' => [
+                                'name' => 'Assetic\Filter\JSMinFilter'
+                            ]
+                        ],
+                        'options' => [
+                            'output' => 'js/lib.js'
+                        ]
+                    ],
+                    'global_images' => [
+                        'assets' => [
+                            'images/*.png',
+                            'images/*.jpg',
+                            'images/*.ico',
+                        ],
+                        'options' => [
+                            'move_raw' => true,
+                        ]
+                    ],
+                ],
+            ],
+        ],
+    ],
     'router' => [
         'routes' => [
             'home' => [
@@ -53,6 +115,11 @@ return [
         'aliases' => [
             'translator' => 'MvcTranslator',
         ],
+        'invokables' => [
+            'AsseticCacheBuster' => 'AsseticBundle\CacheBuster\LastModifiedStrategy'
+        ],
+        'factories' => [
+        ]
     ],
     'translator' => [
         'locale' => 'en_US',
