@@ -4,11 +4,15 @@ return [
     'assetic_configuration' => [
         'debug' => false,
         'buildOnRequest' => true,
-        'webPath' => __DIR__ . '/../../../public',
+        'cacheEnabled' => false,
+        'webPath' => __DIR__ . '/../../../public/assets',
+        'basePath' => 'assets',
+        'cachePath' => __DIR__ . '/../../../data/cache',
         'default' => [
             'assets' => [
                 '@lib_js',
-                '@zoop_admin_css',
+                '@app_js',
+                '@base_css',
             ],
             'options' => [
                 'mixin' => true,
@@ -18,7 +22,7 @@ return [
             'application' => [
                 'root_path' => __DIR__ . '/../assets',
                 'collections' => [
-                    'zoop_admin_css' => [
+                    'base_css' => [
                         'assets' => [
                             'css/zoop/admin/_base.less',
                         ],
@@ -36,9 +40,10 @@ return [
                     ],
                     'lib_js' => [
                         'assets' => [
-                            'js/libs/ember/ember-1.6.1.js',
-                            'js/libs/jquery/jquery-1.10.2.js',
-                            'js/libs/handlebars/handlebars-1.1.2.js',
+                            'js/app/bower_components/jquery/dist/jquery.js',
+                            'js/app/bower_components/handlebars/handlebars.js',
+                            'js/app/bower_components/ember/ember.js',
+                            'js/app/bower_components/ember-data/ember-data.js',
                         ],
                         'filters' => [
                             'JSMinFilter' => [
@@ -49,7 +54,21 @@ return [
                             'output' => 'js/lib.js'
                         ]
                     ],
-                    'global_images' => [
+                    'app_js' => [
+                        'assets' => [
+                            'js/app/scripts/*.js',
+//                            'js/app/templates/*.js',
+                        ],
+                        'filters' => [
+                            'JSMinFilter' => [
+                                'name' => 'Assetic\Filter\JSMinFilter'
+                            ]
+                        ],
+                        'options' => [
+                            'output' => 'js/app.js'
+                        ]
+                    ],
+                    'base_images' => [
                         'assets' => [
                             'images/*.png',
                             'images/*.jpg',

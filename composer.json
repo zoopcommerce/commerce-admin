@@ -95,6 +95,7 @@
         "imagine/imagine"                           : "~0.6",
         "joliclic/javascript-packer"                : "~1.0",
         "kamicane/packager"                         : "~1.0",
+        "lmammino/jsmin4assetic"                    : "1.0.*",
         "leafo/lessphp"                             : "~0.4",
         "mashape/unirest-php"                       : "~1.2",
         "melihucar/ftpclient"                       : "dev-master#faab472b1f3118d4926b3cbfc7d21c9cba255c0f as dev-master",
@@ -122,11 +123,6 @@
     "autoload": {
         "psr-0": {
             "Application": "module/Application/src/"
-        }
-    },
-    "extra": {
-        "installer-paths": {
-            "module/Application/assets/css/lib/{$name}": ["twbs/bootstrap"]
         }
     }
 }

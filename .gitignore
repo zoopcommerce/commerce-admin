@@ -11,3 +11,10 @@ Thumbs.db
 *.log
 *.tar.gz
 /data/temp
+node_modules
+temp
+dist
+.sass-cache
+.tmp
+module/Application/assets/js/app/bower_components
+module/Application/assets/js/test/bower_components

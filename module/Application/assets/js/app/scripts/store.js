@@ -1,0 +1,1 @@
+PartnerAdmin.ApplicationAdapter = DS.FixtureAdapter;
